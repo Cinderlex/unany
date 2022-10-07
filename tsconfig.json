@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.strict.json",
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "ES2015",
+    "moduleResolution": "Node"
+  },
+  "include": ["src/**/*"]
+}
