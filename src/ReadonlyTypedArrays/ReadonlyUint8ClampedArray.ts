@@ -11,13 +11,25 @@ export interface ReadonlyUint8ClampedArray {
 
     readonly byteOffset: number;
 
-    every(predicate: (value: number, index: number, array: ReadonlyUint8ClampedArray) => unknown, thisArg?: any): boolean;
+    every(
+        predicate: (value: number, index: number, array: ReadonlyUint8ClampedArray) => unknown,
+        thisArg?: any
+    ): boolean;
 
-    filter(predicate: (value: number, index: number, array: ReadonlyUint8ClampedArray) => any, thisArg?: any): ReadonlyUint8ClampedArray;
+    filter(
+        predicate: (value: number, index: number, array: ReadonlyUint8ClampedArray) => any,
+        thisArg?: any
+    ): ReadonlyUint8ClampedArray;
 
-    find(predicate: (value: number, index: number, obj: ReadonlyUint8ClampedArray) => boolean, thisArg?: any): number | undefined;
+    find(
+        predicate: (value: number, index: number, obj: ReadonlyUint8ClampedArray) => boolean,
+        thisArg?: any
+    ): number | undefined;
 
-    findIndex(predicate: (value: number, index: number, obj: ReadonlyUint8ClampedArray) => boolean, thisArg?: any): number;
+    findIndex(
+        predicate: (value: number, index: number, obj: ReadonlyUint8ClampedArray) => boolean,
+        thisArg?: any
+    ): number;
 
     forEach(callbackfn: (value: number, index: number, array: ReadonlyUint8ClampedArray) => void, thisArg?: any): void;
 
@@ -27,19 +39,71 @@ export interface ReadonlyUint8ClampedArray {
 
     lastIndexOf(searchElement: number, fromIndex?: number): number;
 
-    map(callbackfn: (value: number, index: number, array: ReadonlyUint8ClampedArray) => number, thisArg?: any): ReadonlyUint8ClampedArray;
+    map(
+        callbackfn: (value: number, index: number, array: ReadonlyUint8ClampedArray) => number,
+        thisArg?: any
+    ): ReadonlyUint8ClampedArray;
 
-    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyUint8ClampedArray) => number): number;
-    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyUint8ClampedArray) => number, initialValue: number): number;
-    reduce<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: ReadonlyUint8ClampedArray) => U, initialValue: U): U;
+    reduce(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyUint8ClampedArray
+        ) => number
+    ): number;
+    reduce(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyUint8ClampedArray
+        ) => number,
+        initialValue: number
+    ): number;
+    reduce<U>(
+        callbackfn: (
+            previousValue: U,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyUint8ClampedArray
+        ) => U,
+        initialValue: U
+    ): U;
 
-    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyUint8ClampedArray) => number): number;
-    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyUint8ClampedArray) => number, initialValue: number): number;
-    reduceRight<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: ReadonlyUint8ClampedArray) => U, initialValue: U): U;
+    reduceRight(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyUint8ClampedArray
+        ) => number
+    ): number;
+    reduceRight(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyUint8ClampedArray
+        ) => number,
+        initialValue: number
+    ): number;
+    reduceRight<U>(
+        callbackfn: (
+            previousValue: U,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyUint8ClampedArray
+        ) => U,
+        initialValue: U
+    ): U;
 
     slice(start?: number, end?: number): ReadonlyUint8ClampedArray;
 
-    some(predicate: (value: number, index: number, array: ReadonlyUint8ClampedArray) => unknown, thisArg?: any): boolean;
+    some(
+        predicate: (value: number, index: number, array: ReadonlyUint8ClampedArray) => unknown,
+        thisArg?: any
+    ): boolean;
 
     subarray(begin?: number, end?: number): ReadonlyUint8ClampedArray;
 
@@ -65,14 +129,18 @@ export interface ReadonlyUint8ClampedArrayConstructor {
 
     readonly BYTES_PER_ELEMENT: number;
 
-    new(elements: Iterable<number>): ReadonlyUint8ClampedArray;
-    new(length: number): ReadonlyUint8ClampedArray;
-    new(array: ArrayLike<number> | ArrayBufferLike): ReadonlyUint8ClampedArray;
-    new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): ReadonlyUint8ClampedArray;
+    new (elements: Iterable<number>): ReadonlyUint8ClampedArray;
+    new (length: number): ReadonlyUint8ClampedArray;
+    new (array: ArrayLike<number> | ArrayBufferLike): ReadonlyUint8ClampedArray;
+    new (buffer: ArrayBufferLike, byteOffset?: number, length?: number): ReadonlyUint8ClampedArray;
 
     of(...items: readonly number[]): ReadonlyUint8ClampedArray;
 
-    from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): ReadonlyUint8ClampedArray;
+    from(
+        arrayLike: Iterable<number>,
+        mapfn?: (v: number, k: number) => number,
+        thisArg?: any
+    ): ReadonlyUint8ClampedArray;
     from(arrayLike: ArrayLike<number>): ReadonlyUint8ClampedArray;
     from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): ReadonlyUint8ClampedArray;
 }

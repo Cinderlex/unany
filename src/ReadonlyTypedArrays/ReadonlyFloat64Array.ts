@@ -13,9 +13,15 @@ export interface ReadonlyFloat64Array {
 
     every(predicate: (value: number, index: number, array: ReadonlyFloat64Array) => unknown, thisArg?: any): boolean;
 
-    filter(predicate: (value: number, index: number, array: ReadonlyFloat64Array) => any, thisArg?: any): ReadonlyFloat64Array;
+    filter(
+        predicate: (value: number, index: number, array: ReadonlyFloat64Array) => any,
+        thisArg?: any
+    ): ReadonlyFloat64Array;
 
-    find(predicate: (value: number, index: number, obj: ReadonlyFloat64Array) => boolean, thisArg?: any): number | undefined;
+    find(
+        predicate: (value: number, index: number, obj: ReadonlyFloat64Array) => boolean,
+        thisArg?: any
+    ): number | undefined;
 
     findIndex(predicate: (value: number, index: number, obj: ReadonlyFloat64Array) => boolean, thisArg?: any): number;
 
@@ -27,15 +33,54 @@ export interface ReadonlyFloat64Array {
 
     lastIndexOf(searchElement: number, fromIndex?: number): number;
 
-    map(callbackfn: (value: number, index: number, array: ReadonlyFloat64Array) => number, thisArg?: any): ReadonlyFloat64Array;
+    map(
+        callbackfn: (value: number, index: number, array: ReadonlyFloat64Array) => number,
+        thisArg?: any
+    ): ReadonlyFloat64Array;
 
-    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyFloat64Array) => number): number;
-    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyFloat64Array) => number, initialValue: number): number;
-    reduce<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: ReadonlyFloat64Array) => U, initialValue: U): U;
+    reduce(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyFloat64Array
+        ) => number
+    ): number;
+    reduce(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyFloat64Array
+        ) => number,
+        initialValue: number
+    ): number;
+    reduce<U>(
+        callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: ReadonlyFloat64Array) => U,
+        initialValue: U
+    ): U;
 
-    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyFloat64Array) => number): number;
-    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyFloat64Array) => number, initialValue: number): number;
-    reduceRight<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: ReadonlyFloat64Array) => U, initialValue: U): U;
+    reduceRight(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyFloat64Array
+        ) => number
+    ): number;
+    reduceRight(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyFloat64Array
+        ) => number,
+        initialValue: number
+    ): number;
+    reduceRight<U>(
+        callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: ReadonlyFloat64Array) => U,
+        initialValue: U
+    ): U;
 
     slice(start?: number, end?: number): ReadonlyFloat64Array;
 
@@ -65,10 +110,10 @@ export interface ReadonlyFloat64ArrayConstructor {
 
     readonly BYTES_PER_ELEMENT: number;
 
-    new(elements: Iterable<number>): ReadonlyFloat64Array;
-    new(length: number): ReadonlyFloat64Array;
-    new(array: ArrayLike<number> | ArrayBufferLike): ReadonlyFloat64Array;
-    new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): ReadonlyFloat64Array;
+    new (elements: Iterable<number>): ReadonlyFloat64Array;
+    new (length: number): ReadonlyFloat64Array;
+    new (array: ArrayLike<number> | ArrayBufferLike): ReadonlyFloat64Array;
+    new (buffer: ArrayBufferLike, byteOffset?: number, length?: number): ReadonlyFloat64Array;
 
     of(...items: readonly number[]): ReadonlyFloat64Array;
 

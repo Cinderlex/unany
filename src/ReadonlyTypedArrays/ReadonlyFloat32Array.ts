@@ -13,9 +13,15 @@ export interface ReadonlyFloat32Array {
 
     every(predicate: (value: number, index: number, array: ReadonlyFloat32Array) => unknown, thisArg?: any): boolean;
 
-    filter(predicate: (value: number, index: number, array: ReadonlyFloat32Array) => any, thisArg?: any): ReadonlyFloat32Array;
+    filter(
+        predicate: (value: number, index: number, array: ReadonlyFloat32Array) => any,
+        thisArg?: any
+    ): ReadonlyFloat32Array;
 
-    find(predicate: (value: number, index: number, obj: ReadonlyFloat32Array) => boolean, thisArg?: any): number | undefined;
+    find(
+        predicate: (value: number, index: number, obj: ReadonlyFloat32Array) => boolean,
+        thisArg?: any
+    ): number | undefined;
 
     findIndex(predicate: (value: number, index: number, obj: ReadonlyFloat32Array) => boolean, thisArg?: any): number;
 
@@ -27,15 +33,54 @@ export interface ReadonlyFloat32Array {
 
     lastIndexOf(searchElement: number, fromIndex?: number): number;
 
-    map(callbackfn: (value: number, index: number, array: ReadonlyFloat32Array) => number, thisArg?: any): ReadonlyFloat32Array;
+    map(
+        callbackfn: (value: number, index: number, array: ReadonlyFloat32Array) => number,
+        thisArg?: any
+    ): ReadonlyFloat32Array;
 
-    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyFloat32Array) => number): number;
-    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyFloat32Array) => number, initialValue: number): number;
-    reduce<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: ReadonlyFloat32Array) => U, initialValue: U): U;
+    reduce(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyFloat32Array
+        ) => number
+    ): number;
+    reduce(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyFloat32Array
+        ) => number,
+        initialValue: number
+    ): number;
+    reduce<U>(
+        callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: ReadonlyFloat32Array) => U,
+        initialValue: U
+    ): U;
 
-    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyFloat32Array) => number): number;
-    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyFloat32Array) => number, initialValue: number): number;
-    reduceRight<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: ReadonlyFloat32Array) => U, initialValue: U): U;
+    reduceRight(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyFloat32Array
+        ) => number
+    ): number;
+    reduceRight(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyFloat32Array
+        ) => number,
+        initialValue: number
+    ): number;
+    reduceRight<U>(
+        callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: ReadonlyFloat32Array) => U,
+        initialValue: U
+    ): U;
 
     slice(start?: number, end?: number): ReadonlyFloat32Array;
 
@@ -65,10 +110,10 @@ export interface ReadonlyFloat32ArrayConstructor {
 
     readonly BYTES_PER_ELEMENT: number;
 
-    new(elements: Iterable<number>): ReadonlyFloat32Array;
-    new(length: number): ReadonlyFloat32Array;
-    new(array: ArrayLike<number> | ArrayBufferLike): ReadonlyFloat32Array;
-    new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): ReadonlyFloat32Array;
+    new (elements: Iterable<number>): ReadonlyFloat32Array;
+    new (length: number): ReadonlyFloat32Array;
+    new (array: ArrayLike<number> | ArrayBufferLike): ReadonlyFloat32Array;
+    new (buffer: ArrayBufferLike, byteOffset?: number, length?: number): ReadonlyFloat32Array;
 
     of(...items: readonly number[]): ReadonlyFloat32Array;
 

@@ -13,9 +13,15 @@ export interface ReadonlyBigInt64Array {
 
     every(predicate: (value: bigint, index: number, array: ReadonlyBigInt64Array) => unknown, thisArg?: any): boolean;
 
-    filter(predicate: (value: bigint, index: number, array: ReadonlyBigInt64Array) => any, thisArg?: any): ReadonlyBigInt64Array;
+    filter(
+        predicate: (value: bigint, index: number, array: ReadonlyBigInt64Array) => any,
+        thisArg?: any
+    ): ReadonlyBigInt64Array;
 
-    find(predicate: (value: bigint, index: number, obj: ReadonlyBigInt64Array) => boolean, thisArg?: any): bigint | undefined;
+    find(
+        predicate: (value: bigint, index: number, obj: ReadonlyBigInt64Array) => boolean,
+        thisArg?: any
+    ): bigint | undefined;
 
     findIndex(predicate: (value: bigint, index: number, obj: ReadonlyBigInt64Array) => boolean, thisArg?: any): number;
 
@@ -27,15 +33,58 @@ export interface ReadonlyBigInt64Array {
 
     lastIndexOf(searchElement: bigint, fromIndex?: number): number;
 
-    map(callbackfn: (value: bigint, index: number, array: ReadonlyBigInt64Array) => bigint, thisArg?: any): ReadonlyBigInt64Array;
+    map(
+        callbackfn: (value: bigint, index: number, array: ReadonlyBigInt64Array) => bigint,
+        thisArg?: any
+    ): ReadonlyBigInt64Array;
 
-    reduce(callbackfn: (previousValue: bigint, currentValue: bigint, currentIndex: number, array: ReadonlyBigInt64Array) => bigint): bigint;
-    reduce(callbackfn: (previousValue: bigint, currentValue: bigint, currentIndex: number, array: ReadonlyBigInt64Array) => bigint, initialValue: bigint): bigint;
-    reduce<U>(callbackfn: (previousValue: U, currentValue: bigint, currentIndex: number, array: ReadonlyBigInt64Array) => U, initialValue: U): U;
+    reduce(
+        callbackfn: (
+            previousValue: bigint,
+            currentValue: bigint,
+            currentIndex: number,
+            array: ReadonlyBigInt64Array
+        ) => bigint
+    ): bigint;
 
-    reduceRight(callbackfn: (previousValue: bigint, currentValue: bigint, currentIndex: number, array: ReadonlyBigInt64Array) => bigint): bigint;
-    reduceRight(callbackfn: (previousValue: bigint, currentValue: bigint, currentIndex: number, array: ReadonlyBigInt64Array) => bigint, initialValue: bigint): bigint;
-    reduceRight<U>(callbackfn: (previousValue: U, currentValue: bigint, currentIndex: number, array: ReadonlyBigInt64Array) => U, initialValue: U): U;
+    reduce(
+        callbackfn: (
+            previousValue: bigint,
+            currentValue: bigint,
+            currentIndex: number,
+            array: ReadonlyBigInt64Array
+        ) => bigint,
+        initialValue: bigint
+    ): bigint;
+
+    reduce<U>(
+        callbackfn: (previousValue: U, currentValue: bigint, currentIndex: number, array: ReadonlyBigInt64Array) => U,
+        initialValue: U
+    ): U;
+
+    reduceRight(
+        callbackfn: (
+            previousValue: bigint,
+            currentValue: bigint,
+            currentIndex: number,
+            array: ReadonlyBigInt64Array
+        ) => bigint
+    ): bigint;
+
+    reduceRight(
+        callbackfn: (
+            previousValue: bigint,
+            currentValue: bigint,
+            currentIndex: number,
+            array: ReadonlyBigInt64Array
+        ) => bigint,
+        initialValue: bigint
+    ): bigint;
+
+    reduceRight<U>(
+        callbackfn: (previousValue: U, currentValue: bigint, currentIndex: number, array: ReadonlyBigInt64Array) => U,
+        initialValue: U
+    ): U;
 
     slice(start?: number, end?: number): ReadonlyBigInt64Array;
 
@@ -65,15 +114,17 @@ export interface ReadonlyBigInt64ArrayConstructor {
 
     readonly BYTES_PER_ELEMENT: number;
 
-    new(length?: number): ReadonlyBigInt64Array;
-    new(array: Iterable<bigint>): ReadonlyBigInt64Array;
-    new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): ReadonlyBigInt64Array;
+    new (length?: number): ReadonlyBigInt64Array;
+
+    new (array: Iterable<bigint>): ReadonlyBigInt64Array;
+
+    new (buffer: ArrayBufferLike, byteOffset?: number, length?: number): ReadonlyBigInt64Array;
 
     of(...items: readonly bigint[]): ReadonlyBigInt64Array;
 
     from(arrayLike: ArrayLike<bigint>): ReadonlyBigInt64Array;
-    from<U>(arrayLike: ArrayLike<U>, mapfn: (v: U, k: number) => bigint, thisArg?: any): ReadonlyBigInt64Array;
 
+    from<U>(arrayLike: ArrayLike<U>, mapfn: (v: U, k: number) => bigint, thisArg?: any): ReadonlyBigInt64Array;
 }
 
 export const ReadonlyBigInt64Array: ReadonlyBigInt64ArrayConstructor = BigInt64Array;

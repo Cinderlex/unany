@@ -13,9 +13,15 @@ export interface ReadonlyInt32Array {
 
     every(predicate: (value: number, index: number, array: ReadonlyInt32Array) => unknown, thisArg?: any): boolean;
 
-    filter(predicate: (value: number, index: number, array: ReadonlyInt32Array) => any, thisArg?: any): ReadonlyInt32Array;
+    filter(
+        predicate: (value: number, index: number, array: ReadonlyInt32Array) => any,
+        thisArg?: any
+    ): ReadonlyInt32Array;
 
-    find(predicate: (value: number, index: number, obj: ReadonlyInt32Array) => boolean, thisArg?: any): number | undefined;
+    find(
+        predicate: (value: number, index: number, obj: ReadonlyInt32Array) => boolean,
+        thisArg?: any
+    ): number | undefined;
 
     findIndex(predicate: (value: number, index: number, obj: ReadonlyInt32Array) => boolean, thisArg?: any): number;
 
@@ -27,15 +33,54 @@ export interface ReadonlyInt32Array {
 
     lastIndexOf(searchElement: number, fromIndex?: number): number;
 
-    map(callbackfn: (value: number, index: number, array: ReadonlyInt32Array) => number, thisArg?: any): ReadonlyInt32Array;
+    map(
+        callbackfn: (value: number, index: number, array: ReadonlyInt32Array) => number,
+        thisArg?: any
+    ): ReadonlyInt32Array;
 
-    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyInt32Array) => number): number;
-    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyInt32Array) => number, initialValue: number): number;
-    reduce<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: ReadonlyInt32Array) => U, initialValue: U): U;
+    reduce(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyInt32Array
+        ) => number
+    ): number;
+    reduce(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyInt32Array
+        ) => number,
+        initialValue: number
+    ): number;
+    reduce<U>(
+        callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: ReadonlyInt32Array) => U,
+        initialValue: U
+    ): U;
 
-    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyInt32Array) => number): number;
-    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyInt32Array) => number, initialValue: number): number;
-    reduceRight<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: ReadonlyInt32Array) => U, initialValue: U): U;
+    reduceRight(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyInt32Array
+        ) => number
+    ): number;
+    reduceRight(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyInt32Array
+        ) => number,
+        initialValue: number
+    ): number;
+    reduceRight<U>(
+        callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: ReadonlyInt32Array) => U,
+        initialValue: U
+    ): U;
 
     slice(start?: number, end?: number): ReadonlyInt32Array;
 
@@ -65,10 +110,10 @@ export interface ReadonlyInt32ArrayConstructor {
 
     readonly BYTES_PER_ELEMENT: number;
 
-    new(elements: Iterable<number>): ReadonlyInt32Array;
-    new(length: number): ReadonlyInt32Array;
-    new(array: ArrayLike<number> | ArrayBufferLike): ReadonlyInt32Array;
-    new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): ReadonlyInt32Array;
+    new (elements: Iterable<number>): ReadonlyInt32Array;
+    new (length: number): ReadonlyInt32Array;
+    new (array: ArrayLike<number> | ArrayBufferLike): ReadonlyInt32Array;
+    new (buffer: ArrayBufferLike, byteOffset?: number, length?: number): ReadonlyInt32Array;
 
     of(...items: readonly number[]): ReadonlyInt32Array;
 

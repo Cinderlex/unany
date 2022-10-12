@@ -13,9 +13,15 @@ export interface ReadonlyUint16Array {
 
     every(predicate: (value: number, index: number, array: ReadonlyUint16Array) => unknown, thisArg?: any): boolean;
 
-    filter(predicate: (value: number, index: number, array: ReadonlyUint16Array) => any, thisArg?: any): ReadonlyUint16Array;
+    filter(
+        predicate: (value: number, index: number, array: ReadonlyUint16Array) => any,
+        thisArg?: any
+    ): ReadonlyUint16Array;
 
-    find(predicate: (value: number, index: number, obj: ReadonlyUint16Array) => boolean, thisArg?: any): number | undefined;
+    find(
+        predicate: (value: number, index: number, obj: ReadonlyUint16Array) => boolean,
+        thisArg?: any
+    ): number | undefined;
 
     findIndex(predicate: (value: number, index: number, obj: ReadonlyUint16Array) => boolean, thisArg?: any): number;
 
@@ -27,15 +33,54 @@ export interface ReadonlyUint16Array {
 
     lastIndexOf(searchElement: number, fromIndex?: number): number;
 
-    map(callbackfn: (value: number, index: number, array: ReadonlyUint16Array) => number, thisArg?: any): ReadonlyUint16Array;
+    map(
+        callbackfn: (value: number, index: number, array: ReadonlyUint16Array) => number,
+        thisArg?: any
+    ): ReadonlyUint16Array;
 
-    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyUint16Array) => number): number;
-    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyUint16Array) => number, initialValue: number): number;
-    reduce<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: ReadonlyUint16Array) => U, initialValue: U): U;
+    reduce(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyUint16Array
+        ) => number
+    ): number;
+    reduce(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyUint16Array
+        ) => number,
+        initialValue: number
+    ): number;
+    reduce<U>(
+        callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: ReadonlyUint16Array) => U,
+        initialValue: U
+    ): U;
 
-    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyUint16Array) => number): number;
-    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyUint16Array) => number, initialValue: number): number;
-    reduceRight<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: ReadonlyUint16Array) => U, initialValue: U): U;
+    reduceRight(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyUint16Array
+        ) => number
+    ): number;
+    reduceRight(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyUint16Array
+        ) => number,
+        initialValue: number
+    ): number;
+    reduceRight<U>(
+        callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: ReadonlyUint16Array) => U,
+        initialValue: U
+    ): U;
 
     slice(start?: number, end?: number): ReadonlyUint16Array;
 
@@ -65,10 +110,10 @@ export interface ReadonlyUint16ArrayConstructor {
 
     readonly BYTES_PER_ELEMENT: number;
 
-    new(elements: Iterable<number>): ReadonlyUint16Array;
-    new(length: number): ReadonlyUint16Array;
-    new(array: ArrayLike<number> | ArrayBufferLike): ReadonlyUint16Array;
-    new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): ReadonlyUint16Array;
+    new (elements: Iterable<number>): ReadonlyUint16Array;
+    new (length: number): ReadonlyUint16Array;
+    new (array: ArrayLike<number> | ArrayBufferLike): ReadonlyUint16Array;
+    new (buffer: ArrayBufferLike, byteOffset?: number, length?: number): ReadonlyUint16Array;
 
     of(...items: readonly number[]): ReadonlyUint16Array;
 

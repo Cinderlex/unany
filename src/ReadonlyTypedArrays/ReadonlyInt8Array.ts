@@ -13,9 +13,15 @@ export interface ReadonlyInt8Array {
 
     every(predicate: (value: number, index: number, array: ReadonlyInt8Array) => unknown, thisArg?: any): boolean;
 
-    filter(predicate: (value: number, index: number, array: ReadonlyInt8Array) => any, thisArg?: any): ReadonlyInt8Array;
+    filter(
+        predicate: (value: number, index: number, array: ReadonlyInt8Array) => any,
+        thisArg?: any
+    ): ReadonlyInt8Array;
 
-    find(predicate: (value: number, index: number, obj: ReadonlyInt8Array) => boolean, thisArg?: any): number | undefined;
+    find(
+        predicate: (value: number, index: number, obj: ReadonlyInt8Array) => boolean,
+        thisArg?: any
+    ): number | undefined;
 
     findIndex(predicate: (value: number, index: number, obj: ReadonlyInt8Array) => boolean, thisArg?: any): number;
 
@@ -27,15 +33,54 @@ export interface ReadonlyInt8Array {
 
     lastIndexOf(searchElement: number, fromIndex?: number): number;
 
-    map(callbackfn: (value: number, index: number, array: ReadonlyInt8Array) => number, thisArg?: any): ReadonlyInt8Array;
+    map(
+        callbackfn: (value: number, index: number, array: ReadonlyInt8Array) => number,
+        thisArg?: any
+    ): ReadonlyInt8Array;
 
-    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyInt8Array) => number): number;
-    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyInt8Array) => number, initialValue: number): number;
-    reduce<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: ReadonlyInt8Array) => U, initialValue: U): U;
+    reduce(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyInt8Array
+        ) => number
+    ): number;
+    reduce(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyInt8Array
+        ) => number,
+        initialValue: number
+    ): number;
+    reduce<U>(
+        callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: ReadonlyInt8Array) => U,
+        initialValue: U
+    ): U;
 
-    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyInt8Array) => number): number;
-    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: ReadonlyInt8Array) => number, initialValue: number): number;
-    reduceRight<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: ReadonlyInt8Array) => U, initialValue: U): U;
+    reduceRight(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyInt8Array
+        ) => number
+    ): number;
+    reduceRight(
+        callbackfn: (
+            previousValue: number,
+            currentValue: number,
+            currentIndex: number,
+            array: ReadonlyInt8Array
+        ) => number,
+        initialValue: number
+    ): number;
+    reduceRight<U>(
+        callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: ReadonlyInt8Array) => U,
+        initialValue: U
+    ): U;
 
     slice(start?: number, end?: number): ReadonlyInt8Array;
 
@@ -65,10 +110,10 @@ export interface ReadonlyInt8ArrayConstructor {
 
     readonly BYTES_PER_ELEMENT: number;
 
-    new(elements: Iterable<number>): ReadonlyInt8Array;
-    new(length: number): ReadonlyInt8Array;
-    new(array: ArrayLike<number> | ArrayBufferLike): ReadonlyInt8Array;
-    new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): ReadonlyInt8Array;
+    new (elements: Iterable<number>): ReadonlyInt8Array;
+    new (length: number): ReadonlyInt8Array;
+    new (array: ArrayLike<number> | ArrayBufferLike): ReadonlyInt8Array;
+    new (buffer: ArrayBufferLike, byteOffset?: number, length?: number): ReadonlyInt8Array;
 
     of(...items: readonly number[]): ReadonlyInt8Array;
 
