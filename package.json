@@ -1,6 +1,6 @@
 {
   "name": "@cinderlex/unany",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Standard tools for standard data processing tasks",
   "sideEffects": false,
   "author": "Cinderlex <cinderlex@pm.me>",
